@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ball
+  - Left Goal
+  - Right Goal
+  - Brick
+  - Player 1
+  - Player 2
+  - Computer
   layers:
   - Default
   - TransparentFX
