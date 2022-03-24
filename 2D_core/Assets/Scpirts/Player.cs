@@ -24,7 +24,27 @@ public class Player : Paddle
     {
         if (dir.sqrMagnitude != 0)
         {
-            rigidBody.AddForce(dir * speed);
+            rigidBody.velocity = dir * speed;
+            
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.tag == "Ball")
+        {
+            rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+    }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.tag == "Ball")
+        {
+            rigidBody.constraints = RigidbodyConstraints2D.None;
+            rigidBody.constraints = RigidbodyConstraints2D.FreezePositionX;
+            rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 }

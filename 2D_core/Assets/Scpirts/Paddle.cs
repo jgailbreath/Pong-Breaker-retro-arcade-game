@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 6f;
 
     protected Rigidbody2D rigidBody;
     
@@ -14,5 +14,5 @@ public class Paddle : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         
     }
-
+   
 }

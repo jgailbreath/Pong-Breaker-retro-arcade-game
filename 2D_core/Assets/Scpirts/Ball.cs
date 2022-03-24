@@ -5,6 +5,7 @@ public class Ball : MonoBehaviour
     public float speed = 200f;
     public bool onPaddle;
     public Transform paddle;
+    public float timeVal = 5f;
 
     private Rigidbody2D rigidBody;
 
@@ -27,6 +28,18 @@ public class Ball : MonoBehaviour
             rigidBody.AddForce(Vector2.right * this.speed);
             onPaddle = false;
         }
+
+        if (timeVal >= 0)
+        {
+            timeVal -= Time.deltaTime;
+        }
+        else if (onPaddle)
+        {
+            rigidBody.AddForce(Vector2.right * this.speed);
+            onPaddle = false;
+        }
+
+        
     }
 
     private void Start()

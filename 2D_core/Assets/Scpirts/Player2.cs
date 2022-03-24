@@ -4,6 +4,7 @@ public class Player2 : Paddle
 {
     private Vector2 dir;
 
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))
@@ -18,13 +19,25 @@ public class Player2 : Paddle
         {
             dir = Vector2.zero;
         }
+
+
     }
 
     private void FixedUpdate()
     {
         if (dir.sqrMagnitude != 0)
         {
-            rigidBody.AddForce(dir * speed);
+            rigidBody.velocity = dir * speed;
         }
     }
+
+    //void OnCollisionEnter(Collision collision)
+    //{
+
+    //    if (collision.gameObject.tag == "Ball")
+    //    {
+    //        Vector3 tempVect = new Vector3(collision.rigidbody.velocity.x * -1, collision.rigidbody.velocity.y * -1, collision.rigidbody.velocity.z);
+    //        collision.rigidbody.velocity = tempVect;
+    //    }
+    //}
 }
