@@ -15,4 +15,12 @@ public class goalScript : MonoBehaviour
     {
         
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Ball")
+        {
+            // do something
+        }
+    }
 }

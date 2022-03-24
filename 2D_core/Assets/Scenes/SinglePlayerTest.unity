@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 30487009}
   - component: {fileID: 30487011}
   - component: {fileID: 30487010}
+  - component: {fileID: 30487012}
   m_Layer: 0
   m_Name: WestGoal
   m_TagString: Untagged
@@ -232,6 +233,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &30487012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30487008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f40064e25c84464a9fc3aa125e2e599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &990555863
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +255,6 @@ GameObject:
   m_Component:
   - component: {fileID: 990555864}
   - component: {fileID: 990555867}
-  - component: {fileID: 990555866}
   - component: {fileID: 990555865}
   m_Layer: 0
   m_Name: SouthWall
@@ -291,27 +303,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &990555866
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 990555863}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &990555867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -373,7 +364,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1521011010}
   - component: {fileID: 1521011013}
-  - component: {fileID: 1521011012}
   - component: {fileID: 1521011011}
   m_Layer: 0
   m_Name: WestWall
@@ -422,27 +412,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &1521011012
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521011009}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &1521011013
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -621,7 +590,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1590074640}
   - component: {fileID: 1590074643}
-  - component: {fileID: 1590074642}
   - component: {fileID: 1590074641}
   m_Layer: 0
   m_Name: EastWall
@@ -670,27 +638,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &1590074642
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590074639}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &1590074643
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -752,7 +699,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1701193147}
   - component: {fileID: 1701193150}
-  - component: {fileID: 1701193149}
   - component: {fileID: 1701193148}
   m_Layer: 0
   m_Name: NorthWall
@@ -801,27 +747,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &1701193149
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701193146}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &1701193150
 SpriteRenderer:
   m_ObjectHideFlags: 0
