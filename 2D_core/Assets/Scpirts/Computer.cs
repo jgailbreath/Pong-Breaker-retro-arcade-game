@@ -3,7 +3,6 @@ using UnityEngine;
 public class Computer : Paddle
 {
     public Rigidbody2D ball;
-    private var orgPos = rigidBody.transform.position;
 
 
     private void FixedUpdate()

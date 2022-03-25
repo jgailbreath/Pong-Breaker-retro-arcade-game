@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed = 200f;
+    public float speed = 4f;
     public bool onPaddle;
     public Transform paddle;
     public float timeVal = 5f;
@@ -25,7 +25,7 @@ public class Ball : MonoBehaviour
         if (Input.GetButtonDown("Jump") && onPaddle)
         {
             //AddStartingForce();
-            rigidBody.AddForce(Vector2.right * this.speed);
+            rigidBody.velocity = (Vector2.right * this.speed);
             onPaddle = false;
         }
 
@@ -35,7 +35,7 @@ public class Ball : MonoBehaviour
         }
         else if (onPaddle)
         {
-            rigidBody.AddForce(Vector2.right * this.speed);
+            rigidBody.velocity = (Vector2.right * this.speed);
             onPaddle = false;
         }
 

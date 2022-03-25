@@ -3,7 +3,6 @@ using UnityEngine;
 public class Player : Paddle
 {
     private Vector2 dir;
-    private var orgPos = rigidBody.transform.position;
 
     private void Update()
     {
