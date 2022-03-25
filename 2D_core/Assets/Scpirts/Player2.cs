@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player2 : Paddle
 {
     private Vector2 dir;
-
+    private var orgPos = rigidBody.transform.position;
 
     private void Update()
     {
@@ -31,13 +31,23 @@ public class Player2 : Paddle
         }
     }
 
-    //void OnCollisionEnter(Collision collision)
-    //{
+    void OnCollisionEnter2D(Collision2D collision)
+    {
 
-    //    if (collision.gameObject.tag == "Ball")
-    //    {
-    //        Vector3 tempVect = new Vector3(collision.rigidbody.velocity.x * -1, collision.rigidbody.velocity.y * -1, collision.rigidbody.velocity.z);
-    //        collision.rigidbody.velocity = tempVect;
-    //    }
-    //}
+        if (collision.gameObject.tag == "Ball")
+        {
+            rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+    }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.tag == "Ball")
+        {
+            rigidBody.constraints = RigidbodyConstraints2D.None;
+            rigidBody.constraints = RigidbodyConstraints2D.FreezePositionX;
+            rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
+            rigidBody.transform.position = orgPos;
+        }
+    }
 }

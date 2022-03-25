@@ -3,6 +3,7 @@ using UnityEngine;
 public class Player : Paddle
 {
     private Vector2 dir;
+    private var orgPos = rigidBody.transform.position;
 
     private void Update()
     {
@@ -45,6 +46,7 @@ public class Player : Paddle
             rigidBody.constraints = RigidbodyConstraints2D.None;
             rigidBody.constraints = RigidbodyConstraints2D.FreezePositionX;
             rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
+            rigidBody.transform.position = orgPos;
         }
     }
 }

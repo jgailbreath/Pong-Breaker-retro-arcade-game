@@ -48,18 +48,18 @@ public class Ball : MonoBehaviour
         onPaddle = true;
     }
 
-    private void AddStartingForce()
-    {
-        float x = Random.value < 0.5f ? -1f : 1f;
-        float y = Random.value < 0.5f ? Random.Range(-1f, -0.5f) : Random.Range(0.5f, 1f);
+    // private void AddStartingForce()
+    // {
+    //     float x = Random.value < 0.5f ? -1f : 1f;
+    //     float y = Random.value < 0.5f ? Random.Range(-1f, -0.5f) : Random.Range(0.5f, 1f);
 
-        Vector2 dir = new Vector2(x, y);
-        rigidBody.AddForce(dir * this.speed);
-    }
+    //     Vector2 dir = new Vector2(x, y);
+    //     rigidBody.AddForce(dir * this.speed);
+    // }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("left") || collision.CompareTag("right"))
+        if (collision.CompareTag("WestWall") || collision.CompareTag("EastWall"))
         {
             rigidBody.velocity = Vector2.zero;
             onPaddle = true;
