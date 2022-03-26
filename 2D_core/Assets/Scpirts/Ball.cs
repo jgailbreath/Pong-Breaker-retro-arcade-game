@@ -2,17 +2,27 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed = 4f;
-    public bool onPaddle;
+    public float speed = 20f;
     public Transform paddle;
     public float timeVal = 5f;
-
+    private bool onPaddle;
     private Rigidbody2D rigidBody;
-
+    private Vector2 dir;
+    private bool countDown = true;
+    private float orgTimeVal;
 
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        orgTimeVal = timeVal;
+        if (paddle.parent.CompareTag("Player1"))
+        {
+            dir = Vector2.right;
+        }
+        else if (paddle.parent.CompareTag("Opponent"))
+        {
+            dir = Vector2.left;
+        }
     }
 
     private void Update()
@@ -25,18 +35,20 @@ public class Ball : MonoBehaviour
         if (Input.GetButtonDown("Jump") && onPaddle)
         {
             //AddStartingForce();
-            rigidBody.velocity = (Vector2.right * this.speed);
+            rigidBody.AddForce(dir * this.speed);
             onPaddle = false;
         }
 
-        if (timeVal >= 0)
+        if (timeVal >= 0 && countDown)
         {
             timeVal -= Time.deltaTime;
         }
         else if (onPaddle)
         {
-            rigidBody.velocity = (Vector2.right * this.speed);
+            rigidBody.AddForce(dir * this.speed);
             onPaddle = false;
+            countDown = false;
+            timeVal = orgTimeVal;
         }
 
         
@@ -44,25 +56,17 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
-        //AddStartingForce();
         onPaddle = true;
     }
 
-    // private void AddStartingForce()
-    // {
-    //     float x = Random.value < 0.5f ? -1f : 1f;
-    //     float y = Random.value < 0.5f ? Random.Range(-1f, -0.5f) : Random.Range(0.5f, 1f);
-
-    //     Vector2 dir = new Vector2(x, y);
-    //     rigidBody.AddForce(dir * this.speed);
-    // }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("WestWall") || collision.CompareTag("EastWall"))
         {
             rigidBody.velocity = Vector2.zero;
             onPaddle = true;
+            countDown = true;
         }
     }
 }

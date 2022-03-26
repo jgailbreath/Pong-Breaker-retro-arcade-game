@@ -4,17 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-//<<<<<<< R.-Jackson
   - Ball
-  - Left Goal
-  - Right Goal
-  - Brick
-  - Player 1
-  - Player 2
-  - Computer
-//=======
-  - Brick
-//>>>>>>> main
+  - Player1
+  - Opponent
   layers:
   - Default
   - TransparentFX

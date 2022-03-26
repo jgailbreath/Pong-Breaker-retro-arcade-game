@@ -30,24 +30,4 @@ public class Computer : Paddle
             }
         }
     }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        if (collision.gameObject.tag == "Ball")
-        {
-            rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
-        }
-    }
-    void OnCollisionExit2D(Collision2D collision)
-    {
-
-        if (collision.gameObject.tag == "Ball")
-        {
-            rigidBody.constraints = RigidbodyConstraints2D.None;
-            rigidBody.constraints = RigidbodyConstraints2D.FreezePositionX;
-            rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
-            rigidBody.transform.position = orgPos;
-        }
-    }
 }
