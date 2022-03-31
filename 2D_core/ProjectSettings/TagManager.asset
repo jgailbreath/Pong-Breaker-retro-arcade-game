@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - 1-player
+  - Ball
+  - Player1
+  - Opponent
   layers:
   - Default
   - TransparentFX
