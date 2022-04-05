@@ -7,11 +7,13 @@ TagManager:
   - Ball
   - Player1
   - Opponent
+  - Player2
+  - Brick
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - 1
   - Water
   - UI
   - 
@@ -43,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Top
+    uniqueID: 2849971231
     locked: 0
