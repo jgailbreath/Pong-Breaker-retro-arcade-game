@@ -19,19 +19,10 @@ public class Paddle : MonoBehaviour
 
         if (collision.gameObject.tag == "Ball")
         {
-            rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
-            orgPos = rigidBody.transform.position;
+            rigidBody.velocity = Vector2.zero;
         }
-    }
-    void OnCollisionExit2D(Collision2D collision)
-    {
 
-        if (collision.gameObject.tag == "Ball")
-        {
-            rigidBody.constraints = RigidbodyConstraints2D.None;
-            rigidBody.constraints = RigidbodyConstraints2D.FreezePositionX;
-            rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
-            rigidBody.transform.position = orgPos;
-        }
+            
+
     }
 }
