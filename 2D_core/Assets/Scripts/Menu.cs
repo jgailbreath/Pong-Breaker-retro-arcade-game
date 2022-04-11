@@ -21,7 +21,7 @@ public class Menu : MonoBehaviour
     public void Menu_exit()
     {
         //  On click of Exit button, will load "Exit" from build settings/scene manager
-        SceneManager.LoadScene("Exit");
+        Application.Quit();
     }
 
     public void Menu_options()
