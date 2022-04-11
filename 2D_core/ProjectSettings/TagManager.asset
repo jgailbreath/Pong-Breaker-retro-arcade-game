@@ -6,9 +6,10 @@ TagManager:
   tags:
   - Ball
   - Player1
-  - Opponent
   - Player2
   - Brick
+  - Goal
+  - Wall
   layers:
   - Default
   - TransparentFX
