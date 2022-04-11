@@ -68,5 +68,13 @@ public class Ball : MonoBehaviour
             onPaddle = true;
             countDown = true;
         }
+        else if (collision.CompareTag("Player"))
+        {
+            rigidBody.AddForce(Vector2.right * this.speed);
+        }
+        else if (collision.CompareTag("Opponent"))
+        {
+            rigidBody.AddForce(Vector2.left * this.speed);
+        }
     }
 }
