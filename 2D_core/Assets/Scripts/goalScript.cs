@@ -20,7 +20,7 @@ public class goalScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ball")
         {
-            // do something
+            //LoseLife();
         }
     }
 }
