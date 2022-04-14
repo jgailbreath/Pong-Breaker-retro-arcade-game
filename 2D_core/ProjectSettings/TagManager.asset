@@ -10,7 +10,10 @@ TagManager:
   - Brick
   - Goal
   - Wall
+  - WestGoal
+  - EastGoal
   - Opponent
+
   layers:
   - Default
   - TransparentFX
@@ -45,6 +48,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 1684501785
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
