@@ -37,6 +37,7 @@ public class Ball : MonoBehaviour
             //AddStartingForce();
             rigidBody.AddForce(dir * this.speed);
             onPaddle = false;
+            timeVal = 0f;
         }
 
         if (timeVal >= 0 && countDown)
@@ -67,6 +68,7 @@ public class Ball : MonoBehaviour
             rigidBody.velocity = Vector2.zero;
             onPaddle = true;
             countDown = true;
+            timeVal = 5f;
         }
         else if (collision.CompareTag("Player"))
         {
