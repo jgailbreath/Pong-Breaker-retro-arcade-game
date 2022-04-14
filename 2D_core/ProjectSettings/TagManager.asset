@@ -10,6 +10,8 @@ TagManager:
   - Brick
   - Goal
   - Wall
+  - WestGoal
+  - EastGoal
   layers:
   - Default
   - TransparentFX

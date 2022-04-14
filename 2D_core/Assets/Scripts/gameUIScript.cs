@@ -21,7 +21,7 @@ public class gameUIScript : MonoBehaviour
         lifeText.text = "Lives: " + lives.ToString();
     }
 
-    void LoseLife()
+    public void LoseLife()
     {
         lives--;
         lifeText.text = "Lives: " + lives.ToString();
