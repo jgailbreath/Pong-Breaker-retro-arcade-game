@@ -10,6 +10,7 @@ TagManager:
   - Brick
   - Goal
   - Wall
+  - Opponent
   layers:
   - Default
   - TransparentFX
