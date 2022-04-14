@@ -5,29 +5,45 @@ using TMPro;
 
 public class gameUIScript : MonoBehaviour
 {
-    private int lives;
-    public TextMeshProUGUI lifeText;
-    public GameObject loseTextObject;
+    private int lives1;
+    private int lives2;
+    public TextMeshProUGUI lifeText1;
+    public TextMeshProUGUI lifeText2;
+    public GameObject loseObject1;
+    public GameObject loseObject2;
     
     void Start()
     {
-        lives = 3;
+        lives1 = 3;
+        lives2 = 3;
         SetCountText();
-        loseTextObject.SetActive(false);
+        loseObject1.SetActive(false);
+        loseObject2.SetActive(false);
     }
 
     void SetCountText()
     {
-        lifeText.text = "Lives: " + lives.ToString();
+        lifeText1.text = "Lives: " + lives1.ToString();
+        lifeText2.text = "Lives: " + lives2.ToString();
     }
 
-    void LoseLife()
+    public void LoseLife1()
     {
-        lives--;
-        lifeText.text = "Lives: " + lives.ToString();
-        if(lives < 1)
+        lives1--;
+        lifeText1.text = "Lives: " + lives1.ToString();
+        if(lives1 < 1)
         {
-            loseTextObject.SetActive(true);
+            loseObject1.SetActive(true);
+        }
+    }
+
+    public void LoseLife2()
+    {
+        lives2--;
+        lifeText2.text = "Lives: " + lives2.ToString();
+        if (lives2 < 1)
+        {
+            loseObject2.SetActive(true);
         }
     }
 }
