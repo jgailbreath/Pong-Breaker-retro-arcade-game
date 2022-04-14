@@ -12,6 +12,8 @@ TagManager:
   - Wall
   - WestGoal
   - EastGoal
+  - Opponent
+
   layers:
   - Default
   - TransparentFX
