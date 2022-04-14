@@ -62,7 +62,7 @@ public class Ball : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("WestWall") || collision.CompareTag("EastWall"))
+        if (collision.CompareTag("WestGoal") || collision.CompareTag("EastGoal"))
         {
             rigidBody.velocity = Vector2.zero;
             onPaddle = true;
