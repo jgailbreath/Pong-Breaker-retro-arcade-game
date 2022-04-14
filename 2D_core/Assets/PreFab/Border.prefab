@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7603033558039399987}
   - component: {fileID: 7603033558039399988}
   - component: {fileID: 7603033558039399989}
-  - component: {fileID: 7603033558039399986}
+  - component: {fileID: 8236754026440050345}
   m_Layer: 0
   m_Name: WestGoal
   m_TagString: WestGoal
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7603033558039399986
+--- !u!114 &8236754026440050345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7603033558039399984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f40064e25c84464a9fc3aa125e2e599, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a57ca5cbf985244b9103308396aa23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
@@ -307,7 +307,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7603033559807903059}
   - component: {fileID: 7603033559807903061}
-  - component: {fileID: 7603033559807903058}
+  - component: {fileID: 2414172038992643487}
+  - component: {fileID: 8697242498799845038}
   m_Layer: 0
   m_Name: EastGoal
   m_TagString: EastGoal
@@ -380,7 +381,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7603033559807903058
+--- !u!114 &2414172038992643487
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -389,10 +390,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 7603033559807903056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f40064e25c84464a9fc3aa125e2e599, type: 3}
+  m_Script: {fileID: 11500000, guid: a9d18bf80bef4144bab561ba74ed09c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
+--- !u!61 &8697242498799845038
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7603033559807903056}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &7603033559977908179
 GameObject:
   m_ObjectHideFlags: 0
