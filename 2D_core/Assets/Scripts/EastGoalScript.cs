@@ -12,7 +12,7 @@ public class EastGoalScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball")
         {
-            UI.LoseLife1();
+            UI.LoseLife2();
         }
     }
 }
