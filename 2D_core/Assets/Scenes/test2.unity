@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &49809432 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5187619213253842413, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-  m_PrefabInstance: {fileID: 1515949690}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7810c9b50bfd1ff4b8d36c2b26f75b83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &592255935
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,65 +270,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1515949690
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.6986165
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.097585
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5187619213253842411, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
-      propertyPath: m_Name
-      value: GameUI
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
 --- !u!1001 &7603033558456902305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -350,10 +282,10 @@ PrefabInstance:
     - target: {fileID: 7603033558039399986, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
       propertyPath: UI
       value: 
-      objectReference: {fileID: 49809432}
+      objectReference: {fileID: 0}
     - target: {fileID: 7603033559011876930, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7603033559011876930, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -402,6 +334,6 @@ PrefabInstance:
     - target: {fileID: 7603033559807903058, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
       propertyPath: UI
       value: 
-      objectReference: {fileID: 49809432}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
