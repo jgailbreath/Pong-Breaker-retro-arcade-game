@@ -10,6 +10,8 @@ public class Ball : MonoBehaviour
     private Vector2 dir;
     private bool countDown = true;
     private float orgTimeVal;
+    static private bool reset = false;
+    public gameUIScript UI;
 
     private void Awake()
     {
@@ -25,8 +27,22 @@ public class Ball : MonoBehaviour
         }
     }
 
+    private void Reset()
+    {
+        rigidBody.velocity = Vector2.zero;
+        onPaddle = true;
+        countDown = true;
+        timeVal = 5f;
+        reset = false;
+    }
+
     private void Update()
     {
+        if (reset)
+        {
+            Reset();
+        }
+
         if (onPaddle)
         {
             transform.position = paddle.position;
@@ -63,12 +79,19 @@ public class Ball : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("WestGoal") || collision.CompareTag("EastGoal"))
+        if (collision.CompareTag("WestGoal"))
         {
-            rigidBody.velocity = Vector2.zero;
-            onPaddle = true;
-            countDown = true;
-            timeVal = 5f;
+            UI.LoseLife1();
+            // rigidBody.velocity = Vector2.zero;
+            // onPaddle = true;
+            // countDown = true;
+            // timeVal = 5f;
+            reset = true;
+        }
+        else if (collision.CompareTag("EastGoal"))
+        {
+            UI.LoseLife2();
+            reset = true;
         }
         else if (collision.CompareTag("Player"))
         {
