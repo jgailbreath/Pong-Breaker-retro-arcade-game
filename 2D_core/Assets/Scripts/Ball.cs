@@ -5,13 +5,14 @@ public class Ball : MonoBehaviour
     public float speed = 20f;
     public Transform paddle;
     public float timeVal = 5f;
+    public gameUIScript UI;
     private bool onPaddle;
     private Rigidbody2D rigidBody;
     private Vector2 dir;
     private bool countDown = true;
     private float orgTimeVal;
-    static private bool reset = false;
-    public gameUIScript UI;
+    public bool reset = false;
+    
 
     private void Awake()
     {
@@ -27,7 +28,7 @@ public class Ball : MonoBehaviour
         }
     }
 
-    private void Reset()
+    public void Reset()
     {
         rigidBody.velocity = Vector2.zero;
         onPaddle = true;
@@ -38,10 +39,10 @@ public class Ball : MonoBehaviour
 
     private void Update()
     {
-        if (reset)
-        {
-            Reset();
-        }
+        //if (reset)
+        //{
+        //    Reset();
+        //}
 
         if (onPaddle)
         {
