@@ -11,6 +11,7 @@ public class gameUIScript : MonoBehaviour
     public TextMeshProUGUI lifeText2;
     public GameObject loseObject1;
     public GameObject loseObject2;
+    public bool GAMEOVER = false;
     
     void Start()
     {
@@ -34,6 +35,7 @@ public class gameUIScript : MonoBehaviour
         if(lives1 < 1)
         {
             loseObject1.SetActive(true);
+            GAMEOVER = true;
         }
     }
 
@@ -44,6 +46,7 @@ public class gameUIScript : MonoBehaviour
         if (lives2 < 1)
         {
             loseObject2.SetActive(true);
+            GAMEOVER = true;
         }
     }
 }

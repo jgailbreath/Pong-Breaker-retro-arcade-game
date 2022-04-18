@@ -7,11 +7,20 @@ public class Paddle : MonoBehaviour
     public float speed = 6f;
     protected Rigidbody2D rigidBody;
     protected Vector3 orgPos;
+    public gameUIScript UI;
        
 
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        if (UI.GAMEOVER)
+        {
+            rigidBody.constraints = Rigidbody2D.constraints.FreezeAll;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

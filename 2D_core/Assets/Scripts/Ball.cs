@@ -43,32 +43,39 @@ public class Ball : MonoBehaviour
         //{
         //    Reset();
         //}
-
-        if (onPaddle)
+        if (!UI.GAMEOVER)
         {
-            transform.position = paddle.position;
+            if (onPaddle)
+            {
+                transform.position = paddle.position;
+            }
+
+            if (Input.GetButtonDown("Jump") && onPaddle)
+            {
+                //AddStartingForce();
+                rigidBody.AddForce(dir * this.speed);
+                onPaddle = false;
+                timeVal = 0f;
+            }
+
+            if (timeVal >= 0 && countDown)
+            {
+                timeVal -= Time.deltaTime;
+            }
+            else if (onPaddle)
+            {
+                rigidBody.AddForce(dir * this.speed);
+                onPaddle = false;
+                countDown = false;
+                timeVal = orgTimeVal;
+            }
+        }
+        else 
+        {
+            rigidBody.constraints = Rigidbody2D.Constraints2D.FreezeAll;
         }
 
-        if (Input.GetButtonDown("Jump") && onPaddle)
-        {
-            //AddStartingForce();
-            rigidBody.AddForce(dir * this.speed);
-            onPaddle = false;
-            timeVal = 0f;
-        }
-
-        if (timeVal >= 0 && countDown)
-        {
-            timeVal -= Time.deltaTime;
-        }
-        else if (onPaddle)
-        {
-            rigidBody.AddForce(dir * this.speed);
-            onPaddle = false;
-            countDown = false;
-            timeVal = orgTimeVal;
-        }
-
+        
         
     }
 
