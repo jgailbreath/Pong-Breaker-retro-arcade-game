@@ -72,7 +72,7 @@ public class Ball : MonoBehaviour
         }
         else 
         {
-            rigidBody.constraints = Rigidbody2D.Constraints2D.FreezeAll;
+            rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
         

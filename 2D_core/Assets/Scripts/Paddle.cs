@@ -19,7 +19,7 @@ public class Paddle : MonoBehaviour
     {
         if (UI.GAMEOVER)
         {
-            rigidBody.constraints = Rigidbody2D.constraints.FreezeAll;
+            rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
 

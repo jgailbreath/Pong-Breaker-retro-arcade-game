@@ -11,6 +11,8 @@ public class gameUIScript : MonoBehaviour
     public TextMeshProUGUI lifeText2;
     public GameObject loseObject1;
     public GameObject loseObject2;
+    public GameObject mainMenuButton;
+    public GameObject playAgainButton;
     public bool GAMEOVER = false;
     
     void Start()
@@ -20,6 +22,8 @@ public class gameUIScript : MonoBehaviour
         SetCountText();
         loseObject1.SetActive(false);
         loseObject2.SetActive(false);
+        mainMenuButton.SetActive(false);
+        playAgainButton.SetActive(false);
     }
 
     void SetCountText()
@@ -36,6 +40,8 @@ public class gameUIScript : MonoBehaviour
         {
             loseObject1.SetActive(true);
             GAMEOVER = true;
+            mainMenuButton.SetActive(true);
+            playAgainButton.SetActive(true);
         }
     }
 
@@ -47,6 +53,8 @@ public class gameUIScript : MonoBehaviour
         {
             loseObject2.SetActive(true);
             GAMEOVER = true;
+            mainMenuButton.SetActive(true);
+            playAgainButton.SetActive(true);
         }
     }
 }
