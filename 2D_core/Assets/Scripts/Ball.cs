@@ -39,44 +39,29 @@ public class Ball : MonoBehaviour
 
     private void Update()
     {
-        //if (reset)
-        //{
-        //    Reset();
-        //}
-        if (!UI.GAMEOVER)
+        if (onPaddle)
         {
-            if (onPaddle)
-            {
-                transform.position = paddle.position;
-            }
-
-            if (Input.GetButtonDown("Jump") && onPaddle)
-            {
-                //AddStartingForce();
-                rigidBody.AddForce(dir * this.speed);
-                onPaddle = false;
-                timeVal = 0f;
-            }
-
-            if (timeVal >= 0 && countDown)
-            {
-                timeVal -= Time.deltaTime;
-            }
-            else if (onPaddle)
-            {
-                rigidBody.AddForce(dir * this.speed);
-                onPaddle = false;
-                countDown = false;
-                timeVal = orgTimeVal;
-            }
-        }
-        else 
-        {
-            rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+            transform.position = paddle.position;
         }
 
-        
-        
+        if (Input.GetButtonDown("Jump") && onPaddle)
+        {
+            rigidBody.AddForce(dir * this.speed);
+            onPaddle = false;
+            timeVal = 0f;
+        }
+
+        if (timeVal >= 0 && countDown)
+        {
+            timeVal -= Time.deltaTime;
+        }
+        else if (onPaddle)
+        {
+            rigidBody.AddForce(dir * this.speed);
+            onPaddle = false;
+            countDown = false;
+            timeVal = orgTimeVal;
+        }
     }
 
     private void Start()
@@ -90,10 +75,6 @@ public class Ball : MonoBehaviour
         if (collision.CompareTag("WestGoal"))
         {
             UI.LoseLife1();
-            // rigidBody.velocity = Vector2.zero;
-            // onPaddle = true;
-            // countDown = true;
-            // timeVal = 5f;
             reset = true;
         }
         else if (collision.CompareTag("EastGoal"))
