@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class gameUIScript : MonoBehaviour
@@ -9,14 +10,18 @@ public class gameUIScript : MonoBehaviour
     private int lives2;
     public TextMeshProUGUI lifeText1;
     public TextMeshProUGUI lifeText2;
+    public TextMeshProUGUI time;
     public GameObject loseObject1;
     public GameObject loseObject2;
     public GameObject mainMenuButton;
     public GameObject playAgainButton;
-    public bool GAMEOVER = false;
+    public Button pauseButton;
+    public Ball ball;
+    private float timer;
     
     void Start()
     {
+        Time.timeScale = 1;
         lives1 = 3;
         lives2 = 3;
         SetCountText();
@@ -24,6 +29,35 @@ public class gameUIScript : MonoBehaviour
         loseObject2.SetActive(false);
         mainMenuButton.SetActive(false);
         playAgainButton.SetActive(false);
+        timer = ball.timeVal + 1;
+    }
+
+    private void Update()
+    {
+        if ((lives1 >= 1 && lives2 >= 1) && timer >= 1)
+        {
+            timer = (int)ball.timeVal + 1;
+            time.text = timer.ToString();
+        }
+        else
+        {
+            time.text = "";
+        }
+        if (time.text == "6")
+        {
+            time.text = "";
+        }
+        
+        if (Time.timeScale == 0)
+        {
+            mainMenuButton.SetActive(true);
+            playAgainButton.SetActive(true);
+        }
+        else
+        {
+            mainMenuButton.SetActive(false);
+            playAgainButton.SetActive(false);
+        }
     }
 
     void SetCountText()
@@ -39,9 +73,10 @@ public class gameUIScript : MonoBehaviour
         if(lives1 < 1)
         {
             loseObject1.SetActive(true);
-            GAMEOVER = true;
-            mainMenuButton.SetActive(true);
-            playAgainButton.SetActive(true);
+            time.text = "";
+            pauseButton.onClick.Invoke();
+            //mainMenuButton.SetActive(true);
+            //playAgainButton.SetActive(true);
         }
     }
 
@@ -52,9 +87,10 @@ public class gameUIScript : MonoBehaviour
         if (lives2 < 1)
         {
             loseObject2.SetActive(true);
-            GAMEOVER = true;
-            mainMenuButton.SetActive(true);
-            playAgainButton.SetActive(true);
+            time.text = "";
+            pauseButton.onClick.Invoke();
+            //mainMenuButton.SetActive(true);
+            //playAgainButton.SetActive(true);
         }
     }
 }

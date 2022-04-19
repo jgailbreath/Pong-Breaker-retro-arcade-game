@@ -13,7 +13,9 @@ public class UIMainMenuScript : MonoBehaviour
 
     public void PlayAgain()
     {
+        paused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 
     public void Pause()
