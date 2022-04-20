@@ -357,6 +357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Border
       objectReference: {fileID: 0}
+    - target: {fileID: 8697242498799845038, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
 --- !u!1001 &871318696
