@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollionsAudio : MonoBehaviour
 {
-    public GameObject ball;
+    public GameObject Ball;
 
     void OnCollisionEnter(Collision col)
     {
@@ -13,9 +13,9 @@ public class CollionsAudio : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Tink");
         }
 
-        if(col.collider.tag == "P1")
+        if(col.collider.tag == "Player1")
         {
-            FindObjectOfType<AudioManager>().Play("Tink");
+            FindObjectOfType<AudioManager>().Play("Clap");
         }
 
         if (col.collider.tag == "Brick")
@@ -23,12 +23,17 @@ public class CollionsAudio : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Tink");
         }
 
-        if (col.collider.tag == "P2")
+        if (col.collider.tag == "opponent")
         {
-            FindObjectOfType<AudioManager>().Play("Tink");
+            FindObjectOfType<AudioManager>().Play("Clap");
         }
 
-        if (col.collider.tag == "Goal")
+        if (col.collider.tag == "WestGoal")
+        {
+            FindObjectOfType<AudioManager>().Play("Crash");
+        }
+
+        if (col.collider.tag == "EastGoal")
         {
             FindObjectOfType<AudioManager>().Play("Crash");
         }
