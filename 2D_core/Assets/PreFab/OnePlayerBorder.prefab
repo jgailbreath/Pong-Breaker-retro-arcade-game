@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 9042891941427649967}
   - component: {fileID: 4988067705467617989}
   m_Layer: 0
-  m_Name: NorthWall
+  m_Name: SouthWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 7560863468752203095}
   - component: {fileID: 6840495142008782789}
   m_Layer: 0
-  m_Name: SouthWall
+  m_Name: NorthWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
