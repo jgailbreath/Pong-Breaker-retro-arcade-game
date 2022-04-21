@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class gameUIScript : MonoBehaviour
@@ -47,7 +48,7 @@ public class gameUIScript : MonoBehaviour
         {
             time.text = "";
         }
-        
+
         if (Time.timeScale == 0)
         {
             mainMenuButton.SetActive(true);
@@ -63,7 +64,14 @@ public class gameUIScript : MonoBehaviour
     void SetCountText()
     {
         lifeText1.text = "Lives: " + lives1.ToString();
-        lifeText2.text = "Lives: " + lives2.ToString();
+        if (SceneManager.GetActiveScene().name == "Scene2")
+        {
+            lifeText2.text = "Lives: " + lives2.ToString();
+        }
+        else if (SceneManager.GetActiveScene().name == "Scene1")
+        {
+            lifeText2.text = "";
+        }
     }
 
     public void LoseLife1()
@@ -75,8 +83,6 @@ public class gameUIScript : MonoBehaviour
             loseObject1.SetActive(true);
             time.text = "";
             pauseButton.onClick.Invoke();
-            //mainMenuButton.SetActive(true);
-            //playAgainButton.SetActive(true);
         }
     }
 
@@ -89,8 +95,6 @@ public class gameUIScript : MonoBehaviour
             loseObject2.SetActive(true);
             time.text = "";
             pauseButton.onClick.Invoke();
-            //mainMenuButton.SetActive(true);
-            //playAgainButton.SetActive(true);
         }
     }
 }
