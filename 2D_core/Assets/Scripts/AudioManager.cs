@@ -2,18 +2,19 @@ using UnityEngine.Audio;
 using System;
 using UnityEngine;
 
+
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
-    public static AudioManager instance;
+    public static AudioManager audioManagerInstance;
 
    
     void Awake()
     {
-        if(instance == null)
+        if (aAudioManagerInstance == null)
         {
-            instance = this;
+           audioManagerInstance = this;
         }
         else
         {

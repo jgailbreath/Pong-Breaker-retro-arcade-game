@@ -76,13 +76,19 @@ public class Ball : MonoBehaviour
         {
             UI.LoseLife1();
             reset = true;
+            // jg----playing with the audio setup
+            FindObjectOfType<AudioManager>().Play("Electro Heart Beat");
+            FindObjectOfType<AudioManager>().Play("Crash");
         }
         else if (collision.CompareTag("EastGoal"))
         {
             UI.LoseLife2();
             reset = true;
+            //jg---playing with the audio setup
+            FindObjectOfType<AudioManager>().Play("Electro Heart Beat");
+            FindObjectOfType<AudioManager>().Play("Crash");
         }
-        else if (collision.CompareTag("Player"))
+        else if (collision.CompareTag("Player1"))
         {
             rigidBody.AddForce(Vector2.right * this.speed);
         }
@@ -90,5 +96,56 @@ public class Ball : MonoBehaviour
         {
             rigidBody.AddForce(Vector2.left * this.speed);
         }
+
+        if (collision.CompareTag("Wall"))
+        {
+            FindObjectOfType<AudioManager>().Play("Tink");
+        }
+
+        if (collision.CompareTag("Brick"))
+        {
+            FindObjectOfType<AudioManager>().Play("Tink");
+        }
+
     }
+
+
+    /*  jg---trying out different setups for the audio manager
+    void OnCollisionEnter(Collision col)
+    {
+        //if (col.collider.tag == "Wall")
+        if (col.CompareTag("Wall"))
+        {
+            FindObjectOfType<AudioManager>().Play("Tink");
+        }
+
+        //if (col.collider.tag == "Player1")
+        C
+        //if (col.collider.tag == "Brick")
+        if (col.CompareTag("Brick"))
+        {
+            FindObjectOfType<AudioManager>().Play("Tink");
+        }
+
+        //if (col.collider.tag == "opponent")
+        if (col.CompareTag("opponent"))
+        {
+            FindObjectOfType<AudioManager>().Play("Clap");
+        }
+
+        //if (col.collider.tag == "WestGoal")
+        if (col.CompareTag("WestGoal"))
+        {
+            FindObjectOfType<AudioManager>().Play("Crash");
+        }
+
+        //if (col.collider.tag == "EastGoal")
+        if (col.CompareTag("EastGoal"))
+        {
+            FindObjectOfType<AudioManager>().Play("Crash");
+        }
+
+
+    }
+    */
 }
