@@ -410,7 +410,9 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2414172038992643487, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
+    - {fileID: 8236754026440050345, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
 --- !u!1001 &871318696
 PrefabInstance:
@@ -880,6 +882,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3749541842925587090, guid: 98f2832997f082b44bba09ab1a9a1f11, type: 3}
       propertyPath: balls.Array.data[0]
+      value: 
+      objectReference: {fileID: 1628501966}
+    - target: {fileID: 3749541842925587090, guid: 98f2832997f082b44bba09ab1a9a1f11, type: 3}
+      propertyPath: balls.Array.data[1]
       value: 
       objectReference: {fileID: 1628501966}
     - target: {fileID: 3749541842925587091, guid: 98f2832997f082b44bba09ab1a9a1f11, type: 3}
