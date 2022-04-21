@@ -25,7 +25,7 @@ public class brickScript : MonoBehaviour
 
         if (this.health <= 0)
         {
-            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
         else
         {
