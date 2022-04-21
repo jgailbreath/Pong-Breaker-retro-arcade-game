@@ -546,7 +546,7 @@ PrefabInstance:
       objectReference: {fileID: 89024878}
     - target: {fileID: 3084289147895306392, guid: e32e7b6bc46404f4fa3a9ea46d9080c3, type: 3}
       propertyPath: speed
-      value: 300
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3084289147895306392, guid: e32e7b6bc46404f4fa3a9ea46d9080c3, type: 3}
       propertyPath: paddle
@@ -680,7 +680,7 @@ PrefabInstance:
       objectReference: {fileID: 89024878}
     - target: {fileID: 4929517077297367997, guid: 8e6e1c33b9b9019419f049c0839c4260, type: 3}
       propertyPath: speed
-      value: 300
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4929517077297367997, guid: 8e6e1c33b9b9019419f049c0839c4260, type: 3}
       propertyPath: paddle
@@ -729,6 +729,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8776182671110324916, guid: 882cb756668722a4d9ebd2ab525edc4d, type: 3}
       propertyPath: m_Name
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776182671110324916, guid: 882cb756668722a4d9ebd2ab525edc4d, type: 3}
+      propertyPath: m_TagString
       value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 8776182671110324917, guid: 882cb756668722a4d9ebd2ab525edc4d, type: 3}

@@ -13,7 +13,9 @@ TagManager:
   - WestGoal
   - EastGoal
   - Opponent
-  - Border
+  - NorthWall
+  - SouthWall
+
   layers:
   - Default
   - TransparentFX
