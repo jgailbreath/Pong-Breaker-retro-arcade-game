@@ -15,7 +15,6 @@ TagManager:
   - Opponent
   - NorthWall
   - SouthWall
-
   layers:
   - Default
   - TransparentFX
