@@ -13,12 +13,13 @@ TagManager:
   - WestGoal
   - EastGoal
   - Opponent
-
+  - NorthWall
+  - SouthWall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 1
+  - 
   - Water
   - UI
   - 
@@ -48,12 +49,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: BG
-    uniqueID: 1684501785
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Top
-    uniqueID: 2849971231
     locked: 0

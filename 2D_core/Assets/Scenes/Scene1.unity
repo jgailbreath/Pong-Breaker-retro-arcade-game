@@ -241,6 +241,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb479ae8e2c06ee48bddc3c48b85a17a, type: 3}
+--- !u!1 &373218803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2208288424266778596, guid: c0c954ac5d43c0347882e21c1e8c18f1, type: 3}
+  m_PrefabInstance: {fileID: 683717639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &373218809
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373218803}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.56, y: 8.22}
+  m_Direction: 0
 --- !u!1001 &683717639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -248,8 +269,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2208288424266778595, guid: c0c954ac5d43c0347882e21c1e8c18f1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2208288424266778596, guid: c0c954ac5d43c0347882e21c1e8c18f1, type: 3}
       propertyPath: m_Name
+      value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208288424266778596, guid: c0c954ac5d43c0347882e21c1e8c18f1, type: 3}
+      propertyPath: m_TagString
       value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 2208288424266778597, guid: c0c954ac5d43c0347882e21c1e8c18f1, type: 3}
@@ -356,6 +385,14 @@ PrefabInstance:
     - target: {fileID: 7603033559011876931, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
       propertyPath: m_Name
       value: Border
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603033559148441105, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
+      propertyPath: m_TagString
+      value: NorthWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603033559807903056, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8697242498799845038, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
       propertyPath: m_IsTrigger
@@ -957,12 +994,16 @@ PrefabInstance:
       objectReference: {fileID: 1674944384}
     - target: {fileID: 4929517077297367997, guid: 8e6e1c33b9b9019419f049c0839c4260, type: 3}
       propertyPath: speed
-      value: 300
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4929517077297367997, guid: 8e6e1c33b9b9019419f049c0839c4260, type: 3}
       propertyPath: paddle
       value: 
       objectReference: {fileID: 2005663229}
+    - target: {fileID: 4929517077297367997, guid: 8e6e1c33b9b9019419f049c0839c4260, type: 3}
+      propertyPath: timeVal
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e6e1c33b9b9019419f049c0839c4260, type: 3}
 --- !u!1001 &1965477347
