@@ -617,7 +617,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Border
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8236754026440050345, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
+    - {fileID: 2414172038992643487, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
 --- !u!1001 &971920348
 PrefabInstance:
