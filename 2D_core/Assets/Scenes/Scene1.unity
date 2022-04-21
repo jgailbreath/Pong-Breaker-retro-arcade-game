@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 449454498157552033, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3717593160371877313, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5187619212093212918, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
+      propertyPath: m_text
+      value: Game Over!
+      objectReference: {fileID: 0}
     - target: {fileID: 5187619213253842410, guid: 6ae074c347b5ca94a9a7b2e55aecc795, type: 3}
       propertyPath: m_RootOrder
       value: 13
