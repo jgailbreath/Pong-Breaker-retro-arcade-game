@@ -71,33 +71,20 @@ public class Ball : MonoBehaviour
 
     }
     
-    /*
-    --jg --4-21--somehow things took a left here and i have no clue why/how
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("WestGoal"))
         {
             UI.LoseLife1();
             reset = true;
-            // jg----playing with the audio setup
-            FindObjectOfType<AudioManager>().Play("Electro Heart Beat");
-            FindObjectOfType<AudioManager>().Play("Crash");
         }
         else if (collision.CompareTag("EastGoal"))
         {
             UI.LoseLife2();
             reset = true;
-            //jg---playing with the audio setup
-            FindObjectOfType<AudioManager>().Play("Electro Heart Beat");
-            FindObjectOfType<AudioManager>().Play("Crash");
         }
-//  4-21--jg--something weird happened here, not sure what<<<<<<< J.-Gailbreath
-        else if (collision.CompareTag("Player1"))
-        {
-            rigidBody.AddForce(Vector2.right * this.speed):
-            FindObjectofType<AudioManager>().Play("Clap");
-        }
-*/
+        
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -110,76 +97,19 @@ public class Ball : MonoBehaviour
         {
             rigidBody.velocity = new Vector2(this.speed, velY);
         }
-        
         else if (collision.gameObject.CompareTag("NorthWall"))
-// 4-21 jg>>>>>>> main
         {
             if (velY <= 0)
             {
-                rigidBody.AddForce(Vector2.down * this.speed)
+                rigidBody.AddForce(Vector2.down * this.speed);
             }
         }
         else if (collision.gameObject.CompareTag("SouthWall"))
         {
             if (velY <= 0)
             {
-                rigidBody.AddForce(Vector2.up * this.speed)
+                rigidBody.AddForce(Vector2.up * this.speed);
             }
         }
-
-        if (collision.CompareTag("Player1") || collision.CompareTag("Opponent"))
-        {
-            FindObjectOfType<AudioManager>().Play("Clap");
-        }
-        
-        if (collision.CompareTag("Wall") ||  collision.CompareTag("Brick"))
-        {
-            FindObjectOfType<AudioManager>().Play("Tink");
-        }
-        
-        if (collision.CompareTag("EastGoal") || collision.CompareTag("WestGoal"))
-        {
-            FindObjectOfType<AudioManager>().Play("Electro Heart Beat");
-            FindObjectOfType<AudioManager>().Play("Crash");
-        }
-
-
-    /*  jg---trying out different setups for the audio manager
-    void OnCollisionEnter(Collision col)
-    {
-        //if (col.collider.tag == "Wall")
-        if (col.CompareTag("Wall"))
-        {
-            FindObjectOfType<AudioManager>().Play("Tink");
-        }
-
-        //if (col.collider.tag == "Player1")
-        C
-        //if (col.collider.tag == "Brick")
-        if (col.CompareTag("Brick"))
-        {
-            FindObjectOfType<AudioManager>().Play("Tink");
-        }
-
-        //if (col.collider.tag == "opponent")
-        if (col.CompareTag("opponent"))
-        {
-            FindObjectOfType<AudioManager>().Play("Clap");
-        }
-
-        //if (col.collider.tag == "WestGoal")
-        if (col.CompareTag("WestGoal"))
-        {
-            FindObjectOfType<AudioManager>().Play("Crash");
-        }
-
-        //if (col.collider.tag == "EastGoal")
-        if (col.CompareTag("EastGoal"))
-        {
-            FindObjectOfType<AudioManager>().Play("Crash");
-        }
-
-
     }
-    */
 }
