@@ -19,6 +19,7 @@ public class gameUIScript : MonoBehaviour
     public Button pauseButton;
     public Ball ball;
     private float timer;
+    private bool singleMode = false;
     
     void Start()
     {
@@ -59,6 +60,17 @@ public class gameUIScript : MonoBehaviour
             mainMenuButton.SetActive(false);
             playAgainButton.SetActive(false);
         }
+
+        if (singleMode)
+        {
+            if (GameObject.FindGameObjectWithTag("Brick") == null)
+            {
+                loseObject2.SetActive(true);
+                time.text = "";
+                pauseButton.onClick.Invoke();
+                Time.timeScale = 0;
+            }
+        }
     }
 
     void SetCountText()
@@ -71,6 +83,7 @@ public class gameUIScript : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "Scene1" || SceneManager.GetActiveScene().name == "SinglePlayerDemo")
         {
             lifeText2.text = "";
+            singleMode = true;
         }
     }
 
