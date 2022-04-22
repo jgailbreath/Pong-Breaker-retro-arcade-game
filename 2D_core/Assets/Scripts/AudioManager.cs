@@ -6,14 +6,14 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
-    public static AudioManager instance;
+    public static AudioManager audioManagerInstance;
 
    
     void Awake()
     {
-        if(instance == null)
+        if(audioManagerInstance == null)
         {
-            instance = this;
+            audioManagerInstance = this;
         }
         else
         {
@@ -33,12 +33,6 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
         }
     }
-
-    private void Start()
-    {
-        Play("8-bit Bop Tune");
-    }
-
    
     public void Play(string name)
     {

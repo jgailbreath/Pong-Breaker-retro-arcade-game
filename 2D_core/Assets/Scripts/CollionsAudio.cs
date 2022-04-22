@@ -6,26 +6,26 @@ public class CollionsAudio : MonoBehaviour
 {
     public GameObject ball;
 
-    void OnCollisionEnter(Collision col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         if( col.collider.tag == "Wall")
         {
             FindObjectOfType<AudioManager>().Play("Tink");
         }
 
-        if(col.collider.tag == "P1")
+        if(col.collider.tag == "Player1")
+        {
+            FindObjectOfType<AudioManager>().Play("Clap");
+        }
+
+        if (col.collider.CompareTag("Brick"))
         {
             FindObjectOfType<AudioManager>().Play("Tink");
         }
 
-        if (col.collider.tag == "Brick")
+        if (col.collider.tag == "Opponent")
         {
-            FindObjectOfType<AudioManager>().Play("Tink");
-        }
-
-        if (col.collider.tag == "P2")
-        {
-            FindObjectOfType<AudioManager>().Play("Tink");
+            FindObjectOfType<AudioManager>().Play("Clap");
         }
 
         if (col.collider.tag == "Goal")
