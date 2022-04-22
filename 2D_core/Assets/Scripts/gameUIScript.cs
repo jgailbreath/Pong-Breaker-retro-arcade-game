@@ -80,7 +80,7 @@ public class gameUIScript : MonoBehaviour
         {
             lifeText2.text = "Lives: " + lives2.ToString();
         }
-        else if (SceneManager.GetActiveScene().name == "Scene1")
+        else if (SceneManager.GetActiveScene().name == "Scene1" || SceneManager.GetActiveScene().name == "SinglePlayerDemo")
         {
             lifeText2.text = "";
             singleMode = true;
