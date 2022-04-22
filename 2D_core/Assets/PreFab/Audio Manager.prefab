@@ -46,56 +46,67 @@ MonoBehaviour:
   sounds:
   - name: Crash
     clip: {fileID: 8300000, guid: d4f96403b9c720144ac89b0bc2133625, type: 3}
-    volume: 0.4
+    volume: 0.636
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: Bop Tune
     clip: {fileID: 8300000, guid: 076c4ee41c05aa944bdfbd9e264dcc7a, type: 3}
     volume: 0.1
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: Lazy Tune
     clip: {fileID: 8300000, guid: 9eb94dbe157ec6841bf181283f375f47, type: 3}
     volume: 0.1
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: Cowbell
     clip: {fileID: 8300000, guid: 0a6b3d41d8f89ee468515faa6c6893ec, type: 3}
-    volume: 0.4
+    volume: 0.66
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: Electro Heart Beat
     clip: {fileID: 8300000, guid: 7dfa8781686bb2844b9ddd8bdd5d11d0, type: 3}
     volume: 0.2
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: Epic Drums
     clip: {fileID: 8300000, guid: 16c25c439813d1047a9fde7b97280997, type: 3}
     volume: 0.2
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: Hard Rock Anthem
     clip: {fileID: 8300000, guid: d22bc2a81d9b15c42a0f40557e7ec8f3, type: 3}
     volume: 0.1
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: Tink
     clip: {fileID: 8300000, guid: 480e376299127c449a3665eb2bad2f7a, type: 3}
-    volume: 0.4
+    volume: 0.649
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: Aggressive Groove Metal
     clip: {fileID: 8300000, guid: 78c7d6a9e01ffa44594a695482352255, type: 3}
     volume: 0.1
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: Clap
     clip: {fileID: 8300000, guid: d02dd34ac33176b4890a111c449085b4, type: 3}
-    volume: 0.4
+    volume: 0.639
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: Karate Yell
     clip: {fileID: 8300000, guid: 52c7da9704d0bc44bb2e9e57f17d134b, type: 3}
-    volume: 0.2
+    volume: 0.597
     pitch: 0
+    loop: 0
     source: {fileID: 0}
