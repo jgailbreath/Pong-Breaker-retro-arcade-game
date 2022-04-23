@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Ball_Collisions_Audio : MonoBehaviour
 {
-    void OnCollisionEnter(Collision col)
+    void OnCollisionEnter2d(Collision2D col)
     {
         if( col.collider.CompareTag("Wall"))
         {
-            FindObjectOfType<AudioManager>().Play("Tink");
+            FindObjectOfType<AudioManager>().Play("Tink4");
         }
 
-        if(col.collider.CompareTag("P1"))
+        if(col.collider.CompareTag("Player1"))
         {
-            FindObjectOfType<AudioManager>().Play("Tink");
+            FindObjectOfType<AudioManager>().Play("Clap");
         }
 
         if (col.collider.CompareTag("Brick"))
@@ -21,19 +21,21 @@ public class Ball_Collisions_Audio : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Tink");
         }
 
-        if (col.collider.CompareTag("P2"))
+        if (col.collider.CompareTag("Opponent"))
         {
-            FindObjectOfType<AudioManager>().Play("Tink");
+            FindObjectOfType<AudioManager>().Play("Clap");
         }
 
         if (col.collider.CompareTag("WestGoal"))
         {
             FindObjectOfType<AudioManager>().Play("Crash");
+            FindObjectOfType<AudioManager>().Play("Electro Heart Beat");
         }
 
         if (col.collider.CompareTag("EastGoal"))
         {
             FindObjectOfType<AudioManager>().Play("Crash");
+            FindObjectOfType<AudioManager>().Play("Electro Heart Beat");
         }
 
     }
