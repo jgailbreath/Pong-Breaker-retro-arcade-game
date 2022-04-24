@@ -81,7 +81,7 @@ public class Ball : MonoBehaviour
         }
         else if (collision.CompareTag("EastGoal"))
         {
-            FindObjectOfType<AudioManager>().Play("Crash");
+            FindObjectOfType<AudioManager>().Play("Horror");
             UI.LoseLife2();
             reset = true;
         }
@@ -97,12 +97,12 @@ public class Ball : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player1"))
         {
-            FindObjectOfType<AudioManager>().Play("Clap");
+            //FindObjectOfType<AudioManager>().Play("Clap");
             rigidBody.velocity = new Vector2(this.speed, velY);
         }
         else if (collision.gameObject.CompareTag("NorthWall"))
         {
-            FindObjectOfType<AudioManager>().Play("Tink");
+            //FindObjectOfType<AudioManager>().Play("Tink");
             if (velY <= 0)
             {
                 rigidBody.AddForce(Vector2.down * this.speed);
@@ -110,7 +110,7 @@ public class Ball : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("SouthWall"))
         {
-            FindObjectOfType<AudioManager>().Play("Tink");
+            //FindObjectOfType<AudioManager>().Play("Tink");
             if (velY <= 0)
             {
                 rigidBody.AddForce(Vector2.up * this.speed);
