@@ -10,7 +10,7 @@ public class NoBricks : MonoBehaviour
     }
     public void No_Bricks()
     {
-        if ((GameObject.FindGameObjectWithTag("Brick") == null))// && (gameUIScript.l1 > 0 && gameUIScript.l2 > 0))
+        if ((GameObject.FindGameObjectWithTag("Brick") == null) && ((gameUIScript.l1 > 0) || (gameUIScript.l2 > 0)))
         {
             FindObjectOfType<AudioManager>().Play("Cowbell");
 

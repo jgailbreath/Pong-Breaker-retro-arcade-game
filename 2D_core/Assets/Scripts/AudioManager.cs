@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour
     {
         var rand = new System.Random();
         int choice = rand.Next(sounds.Length);
-        Sound s = sounds[choice];
+        Sound s = sounds[choice-1];
         s.source.Play();
     }
 }

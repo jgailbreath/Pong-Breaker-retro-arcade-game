@@ -32,6 +32,8 @@ public class gameUIScript : MonoBehaviour
         Time.timeScale = 1;
         lives1 = 3;
         lives2 = 3;
+        l1 = lives1;
+        l2 = lives2;
         SetCountText();
         loseObject1.SetActive(false);
         loseObject2.SetActive(false);
@@ -42,7 +44,21 @@ public class gameUIScript : MonoBehaviour
 
     private void Update()
     {
+        if (lives1 < 1)
+        {
+            StartCoroutine(Delay());
+        }
+
+        if (GameObject.FindGameObjectWithTag("Brick") == null)
+        {
+            FindObjectOfType<AudioManager>().Play("Victory");
+            StartCoroutine(Delay());
+        }
+
+        l1 = lives1;
+        l2 = lives2;
         sM = singleMode;
+
         if ((lives1 >= 1 && lives2 >= 1) && timer >= 1)
         {
             timer = (int)ball.timeVal + 1;
@@ -73,9 +89,17 @@ public class gameUIScript : MonoBehaviour
 
         if (singleMode)
         {
-            sM = true;
+            if(lives1 < 1)
+            {
+                FindObjectOfType<AudioManager>().Play("Defeat");
+                StartCoroutine(Delay());
+            }
+
             if (GameObject.FindGameObjectWithTag("Brick") == null)
             {
+                FindObjectOfType<AudioManager>().Play("Victory");
+                StartCoroutine(Delay());
+                
                 loseObject2.SetActive(true);
                 time.text = "";
                 pauseButton.onClick.Invoke();
@@ -105,6 +129,8 @@ public class gameUIScript : MonoBehaviour
         lifeText1.text = "Lives: " + lives1.ToString();
         if(lives1 < 1)
         {
+            
+
             loseObject1.SetActive(true);
             time.text = "";
             pauseButton.onClick.Invoke();
@@ -122,6 +148,13 @@ public class gameUIScript : MonoBehaviour
             time.text = "";
             pauseButton.onClick.Invoke();
         }
+    }
+
+    IEnumerator Delay()
+    {
+    
+        FindObjectOfType<AudioManager>().Play("Defeat");
+        yield return new WaitForSeconds(6);
     }
     
 }

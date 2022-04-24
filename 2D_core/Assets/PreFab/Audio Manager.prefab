@@ -51,20 +51,6 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Bop Tune
-    priority: 0
-    clip: {fileID: 8300000, guid: 076c4ee41c05aa944bdfbd9e264dcc7a, type: 3}
-    volume: 0.1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Lazy Tune
-    priority: 0
-    clip: {fileID: 8300000, guid: 9eb94dbe157ec6841bf181283f375f47, type: 3}
-    volume: 0.1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
   - name: Cowbell
     priority: 10
     clip: {fileID: 8300000, guid: 0a6b3d41d8f89ee468515faa6c6893ec, type: 3}
@@ -79,31 +65,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Epic Drums
-    priority: 50
-    clip: {fileID: 8300000, guid: 16c25c439813d1047a9fde7b97280997, type: 3}
-    volume: 0.2
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Hard Rock Anthem
-    priority: 50
-    clip: {fileID: 8300000, guid: d22bc2a81d9b15c42a0f40557e7ec8f3, type: 3}
-    volume: 0.1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: Tink
     priority: 10
     clip: {fileID: 8300000, guid: 480e376299127c449a3665eb2bad2f7a, type: 3}
     volume: 0.649
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Aggressive Groove Metal
-    priority: 50
-    clip: {fileID: 8300000, guid: 78c7d6a9e01ffa44594a695482352255, type: 3}
-    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
