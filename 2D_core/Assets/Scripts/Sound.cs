@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using UnityEngine.Audio;
 
 [System.Serializable]
@@ -6,6 +7,8 @@ using UnityEngine.Audio;
 public class Sound
 {
     public string name;
+
+    public int priority;
 
     public AudioClip clip;
 

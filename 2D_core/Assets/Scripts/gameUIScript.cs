@@ -20,7 +20,13 @@ public class gameUIScript : MonoBehaviour
     public Ball ball;
     private float timer;
     private bool singleMode = false;
-    
+    static public int l1;
+    static public int l2;
+    static public bool sM = false;
+
+
+
+
     void Start()
     {
         Time.timeScale = 1;
@@ -36,6 +42,7 @@ public class gameUIScript : MonoBehaviour
 
     private void Update()
     {
+        sM = singleMode;
         if ((lives1 >= 1 && lives2 >= 1) && timer >= 1)
         {
             timer = (int)ball.timeVal + 1;
@@ -45,6 +52,8 @@ public class gameUIScript : MonoBehaviour
         {
             time.text = "";
         }
+
+
         if (time.text == "6")
         {
             time.text = "";
@@ -61,8 +70,10 @@ public class gameUIScript : MonoBehaviour
             playAgainButton.SetActive(false);
         }
 
+
         if (singleMode)
         {
+            sM = true;
             if (GameObject.FindGameObjectWithTag("Brick") == null)
             {
                 loseObject2.SetActive(true);
@@ -90,6 +101,7 @@ public class gameUIScript : MonoBehaviour
     public void LoseLife1()
     {
         lives1--;
+        l1 = lives1;
         lifeText1.text = "Lives: " + lives1.ToString();
         if(lives1 < 1)
         {
@@ -102,6 +114,7 @@ public class gameUIScript : MonoBehaviour
     public void LoseLife2()
     {
         lives2--;
+        l2 = lives2;
         lifeText2.text = "Lives: " + lives2.ToString();
         if (lives2 < 1)
         {
@@ -110,4 +123,5 @@ public class gameUIScript : MonoBehaviour
             pauseButton.onClick.Invoke();
         }
     }
+    
 }
