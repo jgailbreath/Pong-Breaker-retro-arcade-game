@@ -25,7 +25,7 @@ public class Ball_Collisions_Audio : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("Clap");
         }
-
+/*
         if (col.collider.CompareTag("WestGoal"))
         {
             FindObjectOfType<AudioManager>().Play("Crash");
@@ -37,6 +37,7 @@ public class Ball_Collisions_Audio : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Crash");
             FindObjectOfType<AudioManager>().Play("Electro Heart Beat");
         }
+*/
 
     }
 
