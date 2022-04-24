@@ -75,21 +75,61 @@ public class Ball : MonoBehaviour
     {
         if (collision.CompareTag("WestGoal"))
         {
-            FindObjectOfType<AudioManager>().Play("Crash");
+            FindObjectOfType<AudioManager>().Play("Crash"); // trigger to call audio clip
             UI.LoseLife1();
             reset = true;
         }
         else if (collision.CompareTag("EastGoal"))
         {
-            FindObjectOfType<AudioManager>().Play("Crash");
+            FindObjectOfType<AudioManager>().Play("Horror"); // trigger to call audio clip
             UI.LoseLife2();
             reset = true;
         }
         
     }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+        //  collisions will call audio clips based tags of gameObjects
+        if (collision.gameObject.CompareTag("WestGoal"))
+        {
+            FindObjectOfType<AudioManager>().Play("Crash");
+        }
+
+        if (collision.gameObject.CompareTag("EastGoal"))
+        {
+            FindObjectOfType<AudioManager>().Play("Horror");
+        }
+
+        if (collision.gameObject.CompareTag("Brick"))
+        {
+            FindObjectOfType<AudioManager>().Play("Tink3");
+        }
+
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            FindObjectOfType<AudioManager>().Play("Tink");
+        }
+
+        if (collision.gameObject.CompareTag("Player1"))
+        {
+            FindObjectOfType<AudioManager>().Play("Tink2");
+        }
+
+        if (collision.gameObject.CompareTag("Opponent"))
+        {
+            FindObjectOfType<AudioManager>().Play("Tink4");
+        }
+
+        if (collision.gameObject.CompareTag("Ball"))
+        {
+            FindObjectOfType<AudioManager>().Play("Clap");
+        }
+        
+
+        //  velocity control for ball
         float velY = rigidBody.velocity.y;
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Opponent"))
         {
@@ -97,12 +137,10 @@ public class Ball : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player1"))
         {
-            FindObjectOfType<AudioManager>().Play("Clap");
             rigidBody.velocity = new Vector2(this.speed, velY);
         }
         else if (collision.gameObject.CompareTag("NorthWall"))
         {
-            FindObjectOfType<AudioManager>().Play("Tink");
             if (velY <= 0)
             {
                 rigidBody.AddForce(Vector2.down * this.speed);
@@ -110,7 +148,6 @@ public class Ball : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("SouthWall"))
         {
-            FindObjectOfType<AudioManager>().Play("Tink");
             if (velY <= 0)
             {
                 rigidBody.AddForce(Vector2.up * this.speed);

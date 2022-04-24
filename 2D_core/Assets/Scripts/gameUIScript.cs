@@ -21,6 +21,7 @@ public class gameUIScript : MonoBehaviour
     private float timer;
     private bool singleMode = false;
     
+
     void Start()
     {
         Time.timeScale = 1;
@@ -45,6 +46,8 @@ public class gameUIScript : MonoBehaviour
         {
             time.text = "";
         }
+
+
         if (time.text == "6")
         {
             time.text = "";
@@ -61,17 +64,21 @@ public class gameUIScript : MonoBehaviour
             playAgainButton.SetActive(false);
         }
 
+        if (GameObject.FindGameObjectWithTag("Brick") == null)
+        {
+            FindObjectOfType<AudioManager>().Play("Victory");
+        }
+
         if (singleMode)
         {
             if (GameObject.FindGameObjectWithTag("Brick") == null)
             {
+                //FindObjectOfType<AudioManager>().Play("Defeat");
+
                 loseObject2.SetActive(true);
                 time.text = "";
                 pauseButton.onClick.Invoke();
                 Time.timeScale = 0;
-                FindObjectOfType<AudioManager>().Play("Victory");
-                FindObjectOfType<AudioManager>().Play("Wow");
-                FindObjectOfType<AudioManager>().Play("Wow3");
             }
         }
     }
@@ -99,7 +106,6 @@ public class gameUIScript : MonoBehaviour
             loseObject1.SetActive(true);
             time.text = "";
             pauseButton.onClick.Invoke();
-            FindObjectOfType<AudioManager>().Play("Defeat");
         }
     }
 
@@ -112,7 +118,6 @@ public class gameUIScript : MonoBehaviour
             loseObject2.SetActive(true);
             time.text = "";
             pauseButton.onClick.Invoke();
-            FindObjectOfType<AudioManager>().Play("Defeat");
         }
     }
 }

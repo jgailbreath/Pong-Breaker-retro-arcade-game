@@ -370,7 +370,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d22bc2a81d9b15c42a0f40557e7ec8f3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -683,6 +683,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7065839301194691159, guid: 6f511b82430bc974cbcca578f0745387, type: 3}
+      propertyPath: sounds.Array.data[1].priority
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065839301194691159, guid: 6f511b82430bc974cbcca578f0745387, type: 3}
+      propertyPath: sounds.Array.data[2].priority
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8631458403762810388, guid: 6f511b82430bc974cbcca578f0745387, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -788,9 +796,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Border
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8236754026440050345, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
-    - {fileID: 2414172038992643487, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
+    - target: {fileID: 7603033559148441105, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603033559977908179, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38fabe4e924acee4eb4a73adeaf1ac19, type: 3}
 --- !u!1001 &971920348
 PrefabInstance:
