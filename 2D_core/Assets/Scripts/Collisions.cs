@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class Collisions : MonoBehaviour
 {
-    void PlayDatShit(string name)
+    public void PlayDatShit(string name)
     {
         FindObjectOfType<AudioManager>().Play(name);
     }
 
-    string choice;
-    
 
-void OnCollisionEnter2d(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        
-        if( col.gameObject.CompareTag("Wall"))
+
+        Debug.Log("OnCollisionEnter2D");
+
+        if (col.gameObject.CompareTag("Wall"))
         {
-            FindObjectOfType<AudioManager>().Play("Tink");
+            PlayDatShit("Tink");
         }
 
-        if(col.gameObject.CompareTag("Player1"))
+        if (col.gameObject.CompareTag("Player1"))
         {
             PlayDatShit("Tink2");
         }
@@ -30,21 +30,26 @@ void OnCollisionEnter2d(Collision2D col)
             PlayDatShit("Clap");
         }
 
-        if (col.collider.CompareTag("Opponent"))
+        if (col.gameObject.CompareTag("Opponent"))
         {
             PlayDatShit("Tink3");
         }
 
-        if (col.gameObject.CompareTag("WestGoal"))
-        {
-            PlayDatShit("Horror");
-        }
+    }
 
-        if (col.collider.CompareTag("EastGoal"))
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("WestGoal"))
         {
-            PlayDatShit("Crash");
+            FindObjectOfType<AudioManager>().Play("Crash"); // trigger to call audio clip
+        }
+        else if (collision.gameObject.CompareTag("EastGoal"))
+        {
+            FindObjectOfType<AudioManager>().Play("Horror"); // trigger to call audio clip
         }
 
     }
 
+    
 }

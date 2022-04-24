@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 
-public class Randomness : MonoBehaviour
+public class NoBricks_Audio : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,10 +14,5 @@ public class Randomness : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void RandomAudioChoice(params Sound[] s)
-    {
-        int randomIndex = Random.Range(0, s.Length);
     }
 }

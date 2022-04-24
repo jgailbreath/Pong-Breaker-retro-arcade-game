@@ -75,13 +75,11 @@ public class Ball : MonoBehaviour
     {
         if (collision.CompareTag("WestGoal"))
         {
-            FindObjectOfType<AudioManager>().Play("Crash"); // trigger to call audio clip
             UI.LoseLife1();
             reset = true;
         }
         else if (collision.CompareTag("EastGoal"))
         {
-            FindObjectOfType<AudioManager>().Play("Horror"); // trigger to call audio clip
             UI.LoseLife2();
             reset = true;
         }
@@ -91,44 +89,6 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        //  collisions will call audio clips based tags of gameObjects
-        if (collision.gameObject.CompareTag("WestGoal"))
-        {
-            FindObjectOfType<AudioManager>().Play("Crash");
-        }
-
-        if (collision.gameObject.CompareTag("EastGoal"))
-        {
-            FindObjectOfType<AudioManager>().Play("Horror");
-        }
-
-        if (collision.gameObject.CompareTag("Brick"))
-        {
-            FindObjectOfType<AudioManager>().Play("Tink3");
-        }
-
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            FindObjectOfType<AudioManager>().Play("Tink");
-        }
-
-        if (collision.gameObject.CompareTag("Player1"))
-        {
-            FindObjectOfType<AudioManager>().Play("Tink2");
-        }
-
-        if (collision.gameObject.CompareTag("Opponent"))
-        {
-            FindObjectOfType<AudioManager>().Play("Tink4");
-        }
-
-        if (collision.gameObject.CompareTag("Ball"))
-        {
-            FindObjectOfType<AudioManager>().Play("Clap");
-        }
-        
-
         //  velocity control for ball
         float velY = rigidBody.velocity.y;
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Opponent"))
