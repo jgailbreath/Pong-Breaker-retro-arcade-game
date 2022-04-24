@@ -69,9 +69,9 @@ public class gameUIScript : MonoBehaviour
                 time.text = "";
                 pauseButton.onClick.Invoke();
                 Time.timeScale = 0;
-                FindObjectOfType<AudioManager>().Play("Victory");
-                FindObjectOfType<AudioManager>().Play("Wow");
-                FindObjectOfType<AudioManager>().Play("Wow3");
+                //FindObjectOfType<AudioManager>().Play("Victory");
+                //FindObjectOfType<AudioManager>().Play("Wow");
+                //FindObjectOfType<AudioManager>().Play("Wow3");
             }
         }
     }
@@ -112,7 +112,7 @@ public class gameUIScript : MonoBehaviour
             loseObject2.SetActive(true);
             time.text = "";
             pauseButton.onClick.Invoke();
-            FindObjectOfType<AudioManager>().Play("Defeat");
+            //FindObjectOfType<AudioManager>().Play("Defeat");
         }
     }
 }
