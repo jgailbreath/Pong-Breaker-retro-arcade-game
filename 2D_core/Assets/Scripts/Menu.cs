@@ -24,10 +24,10 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-    public void Menu_options()
+    public void Menu_demo()
     {
         //  On click of Options button, will load "Options" from build settings/scene manager
-        SceneManager.LoadScene("Options");
+        SceneManager.LoadScene("SinglePlayerDemo");
     }
 }
 
