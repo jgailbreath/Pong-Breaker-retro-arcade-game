@@ -12,12 +12,13 @@ public class Winner_Loser_Audio : MonoBehaviour
 
     public void Winner_Loser()
     {
-        if ((gameUIScript.sM == true) && (gameUIScript.l1 <= 0))
-
+        if ((gameUIScript.sM = true))
         {
-            FindObjectOfType<AudioManager>().Play("Defeat");
+            if (gameUIScript.l1 < 1)
+            {
+                FindObjectOfType<AudioManager>().Play("Defeat");
+            }
         }
-        
         else if ((gameUIScript.l1 < 1) || (gameUIScript.l2 < 1))
         {
             FindObjectOfType<AudioManager>().Play("Victory");
