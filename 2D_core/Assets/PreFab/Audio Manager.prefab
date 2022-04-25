@@ -84,14 +84,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 16c25c439813d1047a9fde7b97280997, type: 3}
     volume: 0.2
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Hard Rock Anthem
     priority: 50
     clip: {fileID: 8300000, guid: d22bc2a81d9b15c42a0f40557e7ec8f3, type: 3}
     volume: 0.1
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Tink
     priority: 10
@@ -187,6 +187,13 @@ MonoBehaviour:
   - name: Horror
     priority: 20
     clip: {fileID: 8300000, guid: 8a79d4710683c944695678647e490307, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Defeat
+    priority: 20
+    clip: {fileID: 8300000, guid: 5d82900f916945640a93babfd5b65007, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0

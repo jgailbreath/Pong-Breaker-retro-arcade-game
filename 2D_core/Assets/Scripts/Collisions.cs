@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collisions : MonoBehaviour
 {
-    public void PlayDatShit(string name)
+    public void PlayAudio(string name)
     {
         FindObjectOfType<AudioManager>().Play(name);
     }
@@ -12,27 +12,24 @@ public class Collisions : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-
-        Debug.Log("OnCollisionEnter2D");
-
-        if (col.gameObject.CompareTag("Wall"))
+        if (col.gameObject.CompareTag("Wall") || col.gameObject.CompareTag("SouthWall") || col.gameObject.CompareTag("NorthWall"))
         {
-            PlayDatShit("Tink");
+            PlayAudio("Tink");
         }
 
         if (col.gameObject.CompareTag("Player1"))
         {
-            PlayDatShit("Tink2");
+            PlayAudio("Tink2");
         }
 
         if (col.gameObject.CompareTag("Brick"))
         {
-            PlayDatShit("Clap");
+            PlayAudio("Clap");
         }
 
         if (col.gameObject.CompareTag("Opponent"))
         {
-            PlayDatShit("Tink3");
+            PlayAudio("Tink3");
         }
 
     }
@@ -48,8 +45,5 @@ public class Collisions : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("Horror"); // trigger to call audio clip
         }
-
     }
-
-    
 }
