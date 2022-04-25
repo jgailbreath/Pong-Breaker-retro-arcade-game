@@ -8,6 +8,8 @@ public class Sound
 {
     public string name;
 
+    public int priority;
+
     public AudioClip clip;
 
     [Range(0f, 1f)]

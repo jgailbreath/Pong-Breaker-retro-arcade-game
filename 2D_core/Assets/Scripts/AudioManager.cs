@@ -6,22 +6,21 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
-    public static AudioManager audioManagerInstance;
+    public static AudioManager instance;
 
-   
+
     void Awake()
     {
-        if(audioManagerInstance == null)
+        if (instance == null)
         {
-            audioManagerInstance = this;
+            instance = this;
         }
         else
         {
             Destroy(gameObject);
             return;
         }
-        
-        DontDestroyOnLoad(gameObject);
+
 
 
         foreach (Sound s in sounds)
@@ -33,10 +32,22 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
         }
     }
-   
+
+    private void Start()
+    {
+        Play("8-bit Bop Tune");
+    }
+
+
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
+    }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Stop();
     }
 }

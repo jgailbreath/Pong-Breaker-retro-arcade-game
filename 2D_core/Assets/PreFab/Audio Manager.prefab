@@ -45,127 +45,155 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Crash
+    priority: 1
     clip: {fileID: 8300000, guid: d4f96403b9c720144ac89b0bc2133625, type: 3}
     volume: 0.636
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Bop Tune
+    priority: 0
     clip: {fileID: 8300000, guid: 076c4ee41c05aa944bdfbd9e264dcc7a, type: 3}
     volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Lazy Tune
+    priority: 0
     clip: {fileID: 8300000, guid: 9eb94dbe157ec6841bf181283f375f47, type: 3}
     volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Cowbell
+    priority: 10
     clip: {fileID: 8300000, guid: 0a6b3d41d8f89ee468515faa6c6893ec, type: 3}
     volume: 0.66
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Electro Heart Beat
+    priority: 1
     clip: {fileID: 8300000, guid: 7dfa8781686bb2844b9ddd8bdd5d11d0, type: 3}
-    volume: 0.5
+    volume: 0.962
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Epic Drums
+    priority: 50
     clip: {fileID: 8300000, guid: 16c25c439813d1047a9fde7b97280997, type: 3}
     volume: 0.2
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Hard Rock Anthem
+    priority: 50
     clip: {fileID: 8300000, guid: d22bc2a81d9b15c42a0f40557e7ec8f3, type: 3}
     volume: 0.1
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Tink
+    priority: 10
     clip: {fileID: 8300000, guid: 480e376299127c449a3665eb2bad2f7a, type: 3}
     volume: 0.649
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Aggressive Groove Metal
+    priority: 50
     clip: {fileID: 8300000, guid: 78c7d6a9e01ffa44594a695482352255, type: 3}
     volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Clap
+    priority: 25
     clip: {fileID: 8300000, guid: d02dd34ac33176b4890a111c449085b4, type: 3}
     volume: 0.639
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Karate Yell
+    priority: 50
     clip: {fileID: 8300000, guid: 52c7da9704d0bc44bb2e9e57f17d134b, type: 3}
     volume: 0.597
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Defeat
-    clip: {fileID: 8300000, guid: 5d82900f916945640a93babfd5b65007, type: 3}
+  - name: Boing
+    priority: 25
+    clip: {fileID: 8300000, guid: d71a71529eb749c46a3609e69958c7fe, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Defeat
+    priority: 20
     clip: {fileID: 8300000, guid: 5d82900f916945640a93babfd5b65007, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Wow
+    priority: 10
     clip: {fileID: 8300000, guid: dd4815f9ae211ae48b6b7785ed9cb6ab, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Wow2
+    priority: 10
     clip: {fileID: 8300000, guid: 81af110a05b0c0b4283de630f49c8406, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Wow3
+    priority: 10
     clip: {fileID: 8300000, guid: 6508af9359ed14847b51673e8c6fa1ea, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Tink2
+    priority: 5
     clip: {fileID: 8300000, guid: 72fdd40fb3ca7304fadcddf69ee9d28b, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Tink3
+    priority: 5
     clip: {fileID: 8300000, guid: 4992c62b04f5f3c45831054b3fe38dd7, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Tink4
+    priority: 5
     clip: {fileID: 8300000, guid: 16ee263767d60194a9051884d8d89d43, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Victory
+    priority: 20
     clip: {fileID: 8300000, guid: 7a1bfb1bd55ac2c41a4a82f09ee3ec2b, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Horror
+    priority: 20
     clip: {fileID: 8300000, guid: 8a79d4710683c944695678647e490307, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Defeat
+    priority: 20
+    clip: {fileID: 8300000, guid: 5d82900f916945640a93babfd5b65007, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0
