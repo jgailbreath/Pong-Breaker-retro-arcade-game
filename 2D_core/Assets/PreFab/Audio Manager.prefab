@@ -191,3 +191,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Defeat
+    priority: 20
+    clip: {fileID: 8300000, guid: 5d82900f916945640a93babfd5b65007, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

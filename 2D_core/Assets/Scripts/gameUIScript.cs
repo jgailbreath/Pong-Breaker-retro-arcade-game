@@ -20,29 +20,25 @@ public class gameUIScript : MonoBehaviour
     public Ball ball;
     private float timer;
     private bool singleMode = false;
-    static public int l1;
-    static public int l2;
-    static public bool sM = false;
-
+    private bool noBricks = false;
 
 
 
     void Start()
     {
         Time.timeScale = 1;
-        lives1 = 3;
-        lives2 = 3;
-        SetCountText();
         loseObject1.SetActive(false);
         loseObject2.SetActive(false);
         mainMenuButton.SetActive(false);
         playAgainButton.SetActive(false);
+        lives1 = 3;
+        lives2 = 3;
+        SetCountText();
         timer = ball.timeVal + 1;
     }
 
     private void Update()
     {
-        sM = singleMode;
         if ((lives1 >= 1 && lives2 >= 1) && timer >= 1)
         {
             timer = (int)ball.timeVal + 1;
@@ -73,13 +69,10 @@ public class gameUIScript : MonoBehaviour
 
         if (singleMode)
         {
-            sM = true;
-            if (GameObject.FindGameObjectWithTag("Brick") == null)
+            if (!noBricks && GameObject.FindGameObjectWithTag("Brick") == null)
             {
-                loseObject2.SetActive(true);
-                time.text = "";
-                pauseButton.onClick.Invoke();
-                Time.timeScale = 0;
+                noBricks = true;
+                BrickChecker();
             }
         }
     }
@@ -90,38 +83,61 @@ public class gameUIScript : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Scene2")
         {
             lifeText2.text = "Lives: " + lives2.ToString();
+            FindObjectOfType<AudioManager>().Play("Hard Rock Anthem");
         }
         else if (SceneManager.GetActiveScene().name == "Scene1" || SceneManager.GetActiveScene().name == "SinglePlayerDemo")
         {
             lifeText2.text = "";
             singleMode = true;
+            FindObjectOfType<AudioManager>().Play("Epic Drums");
         }
+    }
+
+    void BrickChecker()
+    {
+        loseObject2.SetActive(true);
+        time.text = "";
+        pauseButton.onClick.Invoke();
+        FindObjectOfType<AudioManager>().Stop("Epic Drums");
+        FindObjectOfType<AudioManager>().Play("Victory");
     }
 
     public void LoseLife1()
     {
         lives1--;
-        l1 = lives1;
         lifeText1.text = "Lives: " + lives1.ToString();
-        if(lives1 < 1)
+        if (lives1 < 1)
         {
             loseObject1.SetActive(true);
             time.text = "";
             pauseButton.onClick.Invoke();
+            if (singleMode)
+            {
+                FindObjectOfType<AudioManager>().Stop("Epic Drums");
+                FindObjectOfType<AudioManager>().Play("Defeat");
+
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().Stop("Hard Rock Anthem");
+                FindObjectOfType<AudioManager>().Play("Victory");
+            }
+
         }
     }
 
     public void LoseLife2()
     {
         lives2--;
-        l2 = lives2;
         lifeText2.text = "Lives: " + lives2.ToString();
         if (lives2 < 1)
         {
             loseObject2.SetActive(true);
             time.text = "";
+            FindObjectOfType<AudioManager>().Stop("Hard Rock Anthem");
+            FindObjectOfType<AudioManager>().Play("Victory");
             pauseButton.onClick.Invoke();
         }
     }
-    
+
 }
