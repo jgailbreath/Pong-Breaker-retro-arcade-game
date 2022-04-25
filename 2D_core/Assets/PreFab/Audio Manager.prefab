@@ -84,14 +84,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 16c25c439813d1047a9fde7b97280997, type: 3}
     volume: 0.2
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Hard Rock Anthem
     priority: 50
     clip: {fileID: 8300000, guid: d22bc2a81d9b15c42a0f40557e7ec8f3, type: 3}
     volume: 0.1
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Tink
     priority: 10

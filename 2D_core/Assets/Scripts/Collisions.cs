@@ -12,7 +12,7 @@ public class Collisions : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Wall"))
+        if (col.gameObject.CompareTag("Wall") || col.gameObject.CompareTag("SouthWall") || col.gameObject.CompareTag("NorthWall"))
         {
             PlayAudio("Tink");
         }
