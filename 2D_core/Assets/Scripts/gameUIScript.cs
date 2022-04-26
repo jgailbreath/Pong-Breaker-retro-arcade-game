@@ -83,13 +83,13 @@ public class gameUIScript : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Scene2")
         {
             lifeText2.text = "Lives: " + lives2.ToString();
-            FindObjectOfType<AudioManager>().Play("Hard Rock Anthem");
+            FindObjectOfType<AudioManager>().Play("Background_2");
         }
         else if (SceneManager.GetActiveScene().name == "Scene1" || SceneManager.GetActiveScene().name == "SinglePlayerDemo")
         {
             lifeText2.text = "";
             singleMode = true;
-            FindObjectOfType<AudioManager>().Play("Epic Drums");
+            FindObjectOfType<AudioManager>().Play("Background_3");
         }
     }
 
@@ -98,7 +98,7 @@ public class gameUIScript : MonoBehaviour
         loseObject2.SetActive(true);
         time.text = "";
         pauseButton.onClick.Invoke();
-        FindObjectOfType<AudioManager>().Stop("Epic Drums");
+        FindObjectOfType<AudioManager>().Stop("Background_3");
         FindObjectOfType<AudioManager>().Play("Victory");
     }
 
@@ -113,13 +113,13 @@ public class gameUIScript : MonoBehaviour
             pauseButton.onClick.Invoke();
             if (singleMode)
             {
-                FindObjectOfType<AudioManager>().Stop("Epic Drums");
+                FindObjectOfType<AudioManager>().Stop("Background_3");
                 FindObjectOfType<AudioManager>().Play("Defeat");
 
             }
             else
             {
-                FindObjectOfType<AudioManager>().Stop("Hard Rock Anthem");
+                FindObjectOfType<AudioManager>().Stop("Background_2");
                 FindObjectOfType<AudioManager>().Play("Victory");
             }
 
@@ -134,7 +134,7 @@ public class gameUIScript : MonoBehaviour
         {
             loseObject2.SetActive(true);
             time.text = "";
-            FindObjectOfType<AudioManager>().Stop("Hard Rock Anthem");
+            FindObjectOfType<AudioManager>().Stop("Background_2");
             FindObjectOfType<AudioManager>().Play("Victory");
             pauseButton.onClick.Invoke();
         }

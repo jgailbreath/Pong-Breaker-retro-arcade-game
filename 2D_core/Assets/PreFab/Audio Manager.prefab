@@ -110,7 +110,7 @@ MonoBehaviour:
   - name: Clap
     priority: 25
     clip: {fileID: 8300000, guid: d02dd34ac33176b4890a111c449085b4, type: 3}
-    volume: 0.639
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -159,21 +159,21 @@ MonoBehaviour:
   - name: Tink2
     priority: 5
     clip: {fileID: 8300000, guid: 72fdd40fb3ca7304fadcddf69ee9d28b, type: 3}
-    volume: 0.7
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Tink3
     priority: 5
     clip: {fileID: 8300000, guid: 4992c62b04f5f3c45831054b3fe38dd7, type: 3}
-    volume: 0.7
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Tink4
     priority: 5
     clip: {fileID: 8300000, guid: 16ee263767d60194a9051884d8d89d43, type: 3}
-    volume: 0.7
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -187,7 +187,7 @@ MonoBehaviour:
   - name: Horror
     priority: 20
     clip: {fileID: 8300000, guid: 8a79d4710683c944695678647e490307, type: 3}
-    volume: 0.7
+    volume: 0.8
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -197,4 +197,25 @@ MonoBehaviour:
     volume: 0.7
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: Background_1
+    priority: 20
+    clip: {fileID: 8300000, guid: 1801f5f9ea76da84fa5b9ef046f5baf2, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Background_2
+    priority: 20
+    clip: {fileID: 8300000, guid: 18d7eedcd70780d4fb6dc69be3955f4c, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Background_3
+    priority: 20
+    clip: {fileID: 8300000, guid: 1b340685f23ae67469ada0aba5ba01f0, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
