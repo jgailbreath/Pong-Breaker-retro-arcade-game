@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Collisions : MonoBehaviour
 {
+    //  Function to shorten up the call for audio manager to play selected audio clip.
     public void PlayAudio(string name)
     {
         FindObjectOfType<AudioManager>().Play(name);
     }
 
-
+    //  Play selected audio clips from sounds array when collisions on ball are detected
+    //  --specific object collisions identified by tags on game objects
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Wall") || col.gameObject.CompareTag("SouthWall") || col.gameObject.CompareTag("NorthWall"))
@@ -34,16 +36,17 @@ public class Collisions : MonoBehaviour
 
     }
 
-
+    //  Play selected audio clips from sounds array when goal objects are triggered
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("WestGoal"))
         {
-            FindObjectOfType<AudioManager>().Play("Crash"); // trigger to call audio clip
+            PlayAudio("Crash");
         }
         else if (collision.gameObject.CompareTag("EastGoal"))
         {
-            FindObjectOfType<AudioManager>().Play("Horror"); // trigger to call audio clip
+            PlayAudio("Horror");
+
         }
     }
 }

@@ -3,7 +3,8 @@ using System;
 using UnityEngine.Audio;
 
 [System.Serializable]
-
+//  Class which holds fields to house the various settings from
+//  the audio clips stored in array.
 public class Sound
 {
     public string name;

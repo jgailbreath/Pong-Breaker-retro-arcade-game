@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    // Establish variables to be used in class.
     public float speed = 6f;
     public Transform paddle;
     public float timeVal = 5f;
@@ -13,12 +14,12 @@ public class Ball : MonoBehaviour
     private float orgTimeVal;
     public bool reset = false;
 
-    //Make the ball on paddle beginnning of the game
+
     private void Start()
     {
         onPaddle = true;
     }
-
+    
     private void Awake()
     {
         //Set the velocity of the ball depending on which player it is on
