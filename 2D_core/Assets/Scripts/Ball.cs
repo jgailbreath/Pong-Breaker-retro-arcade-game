@@ -15,7 +15,6 @@ public class Ball : MonoBehaviour
     public bool reset = false;
 
 
-    //  Set start location to be on the paddle
     private void Start()
     {
         onPaddle = true;
@@ -23,8 +22,9 @@ public class Ball : MonoBehaviour
     
     private void Awake()
     {
+        //Set the velocity of the ball depending on which player it is on
         rigidBody = GetComponent<Rigidbody2D>();
-        orgTimeVal = timeVal;
+        orgTimeVal = timeVal;//The timer to release the game
         if (paddle.parent.CompareTag("Player1"))
         {
             startVelocity = new Vector2(speed, 0f);
@@ -35,6 +35,7 @@ public class Ball : MonoBehaviour
         }
     }
 
+    //Reset the ball back to the paddle and make the ball have no velocity 
     public void Reset()
     {
         rigidBody.velocity = Vector2.zero;
@@ -46,11 +47,13 @@ public class Ball : MonoBehaviour
 
     private void Update()
     {
+        //Keep the ball on the paddle
         if (onPaddle)
         {
             transform.position = paddle.position;
         }
 
+        //Release the ball when the timer is 0
         if (timeVal >= 0 && countDown)
         {
             timeVal -= Time.deltaTime;
@@ -63,6 +66,7 @@ public class Ball : MonoBehaviour
             timeVal = orgTimeVal;
         }
 
+        //Push the ball away from the north and south walls when it gets stuck
         if ((rigidBody.velocity.x > -1 * speed) && (rigidBody.velocity.x <= 0f))
         {
             rigidBody.velocity = new Vector2(-1 * speed,rigidBody.velocity.y);
@@ -76,6 +80,7 @@ public class Ball : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Goal interaction
         if (collision.CompareTag("WestGoal"))
         {
             UI.LoseLife1();
@@ -92,7 +97,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //  velocity control for ball
+        //Velocity control for ball
         float velY = rigidBody.velocity.y;
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Opponent"))
         {

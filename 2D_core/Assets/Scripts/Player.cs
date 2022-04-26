@@ -6,6 +6,7 @@ public class Player : Paddle
 
     private void Update()
     {
+        //Keyboard Input to control the direction of the paddle of the player
         if (Input.GetKey(KeyCode.W))
         {
             dir = Vector2.up;
@@ -22,6 +23,7 @@ public class Player : Paddle
 
     private void FixedUpdate()
     {
+        //Apply force to the paddle to move it
         if (dir.sqrMagnitude != 0)
         {
             rigidBody.AddForce(dir * speed);

@@ -16,6 +16,7 @@ public class Paddle : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        //Make the velocity of the paddle 0 whenever the ball touches it
         if (collision.gameObject.tag == "Ball")
         {
             rigidBody.velocity = Vector2.zero;

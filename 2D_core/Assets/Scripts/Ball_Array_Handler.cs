@@ -8,6 +8,7 @@ public class Ball_Array_Handler : MonoBehaviour
 
     void Update()
     {
+        //Reset the ball objects
         if (balls[0].reset || balls[1].reset)
         {
             foreach (Ball ball in balls)
