@@ -1,4 +1,4 @@
-# 3037_Group_Project
+Pong-Breaker
 BreakOut / Pong arcade clone
 
 ![breakout](https://user-images.githubusercontent.com/72633541/165184118-76ac4182-b9d9-4e10-b637-d1f092b90c48.jpg)
