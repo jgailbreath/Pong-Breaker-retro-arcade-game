@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    //  Array to store all audio clips used in game
     public Sound[] sounds;
-
+    //  Establish instance of Audio Manager to be used throughout scenes
     public static AudioManager instance;
 
-
+    //  Initialize instance of Audio Manager
+    //--if one already exists, destroy the object so there are not multiples
     void Awake()
     {
         if (instance == null)
@@ -22,7 +24,7 @@ public class AudioManager : MonoBehaviour
         }
 
 
-
+        //  Roll through the sounds array to get values from fields
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -32,12 +34,6 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
         }
     }
-
-    private void Start()
-    {
-        Play("8-bit Bop Tune");
-    }
-
 
     public void Play(string name)
     {
