@@ -10,7 +10,7 @@ public class UIMainMenuScript : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Stop("Hard Rock Anthem");
         FindObjectOfType<AudioManager>().Stop("Epic Drums");
-        SceneManager.LoadScene("Main Title");
+        SceneManager.LoadScene("Main Title Test");
     }
 
     public void PlayAgain()
