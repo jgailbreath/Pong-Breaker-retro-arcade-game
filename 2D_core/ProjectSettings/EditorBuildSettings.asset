@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Dead/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Splash Intro.unity
+  - enabled: 0
+    path: Assets/Dead/Splash Intro.unity
     guid: 60f5d20279faf1941a9ee2d47ff74d1b
-  - enabled: 1
-    path: Assets/Scenes/Main Title.unity
+  - enabled: 0
+    path: Assets/Dead/Main Title.unity
     guid: 0e2543691889d824cb3d7c631012b4db
+  - enabled: 1
+    path: Assets/Scenes/Main Title Test.unity
+    guid: 67ff9560ab5be4d4f90700b25aec6bfc
   - enabled: 1
     path: Assets/Scenes/Scene1.unity
     guid: fa720d31fe0dd76478a872db71d717ce
@@ -21,9 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene2.unity
     guid: ef25bd220ff04cb41bea33ffb8a24820
   - enabled: 1
-    path: Assets/Scenes/Options.unity
-    guid: 36dd6663c62f8f1488f03a00078e58db
-  - enabled: 1
     path: Assets/Scenes/SinglePlayerDemo.unity
     guid: 7b51500adf2260743bbe1ebd41981392
+  - enabled: 0
+    path: Assets/Dead/Options.unity
+    guid: 36dd6663c62f8f1488f03a00078e58db
   m_configObjects: {}
