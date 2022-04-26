@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Collisions : MonoBehaviour
 {
+    //  Function to shorten up the call for audio manager to play selected audio clip.
     public void PlayAudio(string name)
     {
         FindObjectOfType<AudioManager>().Play(name);
