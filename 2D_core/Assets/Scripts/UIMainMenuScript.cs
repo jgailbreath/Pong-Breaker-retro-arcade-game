@@ -8,8 +8,8 @@ public class UIMainMenuScript : MonoBehaviour
     private bool paused = false;
     public void MainMenu()
     {
-        FindObjectOfType<AudioManager>().Stop("Hard Rock Anthem");
-        FindObjectOfType<AudioManager>().Stop("Epic Drums");
+        FindObjectOfType<AudioManager>().Stop("Background_2");
+        FindObjectOfType<AudioManager>().Stop("Background_3");
         SceneManager.LoadScene("Main Title Test");
     }
 
