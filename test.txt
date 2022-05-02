@@ -1,8 +1,0 @@
-this is a test file. Pay no attention to me
-//<<<<<<< C.-Newton
-//=======
-Fo-shizzle
-
-
-test test
-//>>>>>>> main
